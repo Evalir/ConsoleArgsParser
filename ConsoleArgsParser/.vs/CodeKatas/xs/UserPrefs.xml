@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{49803214-82B9-4A59-BFA0-63DAB2A2A72E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="travis.yml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NTest/Program.cs">
     <Files>
       <File FileName="CodeKatas/Program.cs" Line="7" Column="10" />
       <File FileName="CodeKatas/ArgsClass.cs" Line="1" Column="1" />
       <File FileName="NTest/Program.cs" Line="1" Column="1" />
-      <File FileName="travis.yml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">

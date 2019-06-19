@@ -17,36 +17,7 @@ namespace CodeKatas
             return typeof(S).IsValueType;
         }
 
-
-        public Dictionary<string, S> GeneralSParse(Dictionary<string, S> scheme, string args)
-        {
-            var dict = new Dictionary<string, S>();
-
-            if (scheme.Count == 0 || scheme == null)
-                throw new NoSchemeException();
-            
-            foreach (var command in scheme)
-            {   
-                if (command.Key.Length != 2 || command.Key[0] != '-')
-                    throw new InvalidSchemeException();
-
-                else
-                {
-
-                }
-            }
-            if (args != null)
-            {
-                string[] chain = args.Split(" ");
-                foreach (var item in chain)
-                {
-
-                }
-            }
-           return dict;
-        }
-
-        public Dictionary<string, bool> BoolArgs(string[] scheme, string args)
+        public Dictionary<string, bool> ParseArgumentsWithSchema(string[] scheme, string args)
         {
             var dict = new Dictionary<string, bool>();
 

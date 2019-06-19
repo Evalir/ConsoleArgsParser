@@ -14,7 +14,7 @@ namespace NTest
         {
             var scheme = new string[0];
             var control = new ArgsClass<bool>();
-            Assert.Throws<NoSchemeException>(() => control.BoolArgs(scheme, null));
+            Assert.Throws<NoSchemeException>(() => control.ParseArgumentsWithSchema(scheme, null));
         }
         [Test]
         public void OneScheme()
@@ -25,7 +25,7 @@ namespace NTest
             var expected = new Dictionary<string, bool>();
             expected.Add(scheme[0], false);
 
-            var actual = control.BoolArgs(scheme, null);
+            var actual = control.ParseArgumentsWithSchema(scheme, null);
             Assert.AreEqual(expected, actual);
         }
 
@@ -40,7 +40,7 @@ namespace NTest
             expected.Add(scheme[0], false);
             expected.Add(scheme[1], false);
 
-            var actual = control.BoolArgs(scheme, null);
+            var actual = control.ParseArgumentsWithSchema(scheme, null);
             Assert.AreEqual(expected, actual);
         }
 
@@ -55,7 +55,7 @@ namespace NTest
             expected.Add(scheme[0], false);
             expected.Add(scheme[1], false);
 
-            Assert.Throws<InvalidSchemeException>(() => control.BoolArgs(scheme, null));
+            Assert.Throws<InvalidSchemeException>(() => control.ParseArgumentsWithSchema(scheme, null));
         }
         [Test]
         public void NoArgs()
@@ -69,7 +69,7 @@ namespace NTest
             expected.Add(scheme[0], true);
             expected.Add(scheme[1], false);
 
-            Assert.AreEqual(expected, control.BoolArgs(scheme, arg));
+            Assert.AreEqual(expected, control.ParseArgumentsWithSchema(scheme, arg));
         }
         [Test]
         public void SomeArgs()
@@ -86,7 +86,7 @@ namespace NTest
             expected.Add(scheme[1], false);
             expected.Add(scheme[2], true);
             expected.Add(scheme[3], false);
-            Assert.AreEqual(expected, control.BoolArgs(scheme, arg));
+            Assert.AreEqual(expected, control.ParseArgumentsWithSchema(scheme, arg));
         }
         [Test]
         public void InvalidArgs()
@@ -104,7 +104,7 @@ namespace NTest
             expected.Add(scheme[2], true);
             expected.Add(scheme[3], false);
 
-            Assert.Throws<InvalidArgException>(() => control.BoolArgs(scheme, arg));
+            Assert.Throws<InvalidArgException>(() => control.ParseArgumentsWithSchema(scheme, arg));
         }
         [Test]
         public void InvalidArgsNotDeclared()
@@ -122,9 +122,10 @@ namespace NTest
             expected.Add(scheme[2], true);
             expected.Add(scheme[3], false);
 
-            Assert.Throws<InvalidArgException>(() => control.BoolArgs(scheme, arg));
+            Assert.Throws<InvalidArgException>(() => control.ParseArgumentsWithSchema(scheme, arg));
         }
     }
+
     [TestFixture]
     class IntTests{
         [Test]
@@ -132,7 +133,7 @@ namespace NTest
         {
             var scheme = new string[0];
             var control = new ArgsClass<bool>();
-            Assert.Throws<NoSchemeException>(() => control.BoolArgs(scheme, null));
+            Assert.Throws<NoSchemeException>(() => control.ParseArgumentsWithSchema(scheme, null));
         }
     }
 }
