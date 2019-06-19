@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{49803214-82B9-4A59-BFA0-63DAB2A2A72E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="travis.yml">
+    <Files>
+      <File FileName="CodeKatas/Program.cs" Line="7" Column="10" />
+      <File FileName="CodeKatas/ArgsClass.cs" Line="1" Column="1" />
+      <File FileName="NTest/Program.cs" Line="1" Column="1" />
+      <File FileName="travis.yml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="CodeKatas" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.CodeKatas PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
