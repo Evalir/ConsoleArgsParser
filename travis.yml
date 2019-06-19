@@ -1,1 +1,3 @@
-﻿
+﻿language: csharp
+solution: ./ConsoleArgsParser/CodeKatas.sln
+install: dotnet restore ./ConsoleArgsParser/CodeKatas.sln
