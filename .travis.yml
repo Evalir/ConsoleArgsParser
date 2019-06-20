@@ -4,4 +4,4 @@ dotnet: 2.1
 install:
   - dotnet restore ./ConsoleArgsParser/CodeKatas.sln
 script:
-  - dotnet build
+  - dotnet build ./ConsoleArgsParser/CodeKatas.sln
