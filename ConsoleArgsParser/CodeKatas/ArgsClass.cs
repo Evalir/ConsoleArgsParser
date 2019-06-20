@@ -20,17 +20,19 @@ namespace CodeKatas
 
             foreach (var command in scheme)
             {
-                if (command.Key.Length != 2 || command.Key[0] != '-')
+                if ((command.Key.Length == 2 || command.Key[0] == '-') || (command.Key.Length == 3 && command.Key.Contains("--"))) { }
+                    //throw new InvalidSchemeException();
+                else
                     throw new InvalidSchemeException();
 
+                
+                
+                Type ParameterType = default(S).GetType();
+                if (ParameterType == typeof(bool))
+                    schems.Add(command.Key, "false");
                 else
-                {
-                    Type ParameterType = default(S).GetType();
-                    if (ParameterType == typeof(bool))
-                        schems.Add(command.Key, "false");
-                    else
-                        schems.Add(command.Key, "");
-                }
+                    schems.Add(command.Key, "");
+                
             }
         }
         public Dictionary<string,string> GetSchemes()
@@ -52,7 +54,7 @@ namespace CodeKatas
                     if (schems.ContainsKey(chain[i]))
                     {
                         bool bollean = false;
-                        if (schems[chain[i]] == "false" || schems[chain[i]] == "true")
+                        if ((schems[chain[i]] == "false" || schems[chain[i]] == "true"))
                             bollean = true;
                         if (!bollean)
                         {
@@ -62,7 +64,10 @@ namespace CodeKatas
                                 throw new InvalidArgException();
 
                         }
-                        if (chain[i].Length != 2 && chain[i][0] != '-')
+
+                        if ((chain[i].Length == 2 && chain[i][0] == '-') || (chain[i].Length == 3 && chain[i].Contains("--"))) { }
+            
+                        else
                         {
                             throw new InvalidArgException();
                         }/*
@@ -100,7 +105,7 @@ namespace CodeKatas
                 int cant = chain.Length;
                 //if()
                 for(int i = 0;i< cant; i++)
-                {   
+                {
                     if (schems.ContainsKey(chain[i]))
                     {
                         bool bollean = false;
@@ -114,7 +119,7 @@ namespace CodeKatas
                                 throw new InvalidArgException();
 
                         }
-                        if(chain[i].Length != 2 && chain[i][0] != '-')
+                        if ((chain[i].Length != 2 && chain[i][0] != '-') || (chain[i].Length != 3 && chain[i].Contains("--")))
                         {
                             throw new InvalidArgException();
                         }/*
