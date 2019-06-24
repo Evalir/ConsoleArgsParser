@@ -5,3 +5,4 @@ install:
   - dotnet restore ./ConsoleArgsParser/CodeKatas.sln
 script:
   - dotnet build ./ConsoleArgsParser/CodeKatas.sln
+  - dotnet test ./ConsoleArgsParser/NTest/Ntest.csproj
