@@ -688,17 +688,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/CodeKatas.csproj",
-      "projectName": "CodeKatas",
-      "projectPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/CodeKatas.csproj",
+      "projectUniqueName": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/ConsoleArgsParser.csproj",
+      "projectName": "ConsoleArgsParser",
+      "projectPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/ConsoleArgsParser.csproj",
       "packagesPath": "/Users/Evalir/.nuget/packages/",
-      "outputPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/obj/",
+      "outputPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Evalir/.nuget/NuGet/NuGet.Config"
+        "/Users/Evalir/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -721,8 +721,9 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.0, )",
+            "version": "2.1.0",
             "autoReferenced": true
           }
         },

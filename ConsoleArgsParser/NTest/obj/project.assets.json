@@ -1648,17 +1648,14 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "CodeKatas/1.0.0": {
+      "ConsoleArgsParser/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "Microsoft.NETCore.App": "2.1.0"
-        },
         "compile": {
-          "bin/placeholder/CodeKatas.dll": {}
+          "bin/placeholder/ConsoleArgsParser.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CodeKatas.dll": {}
+          "bin/placeholder/ConsoleArgsParser.dll": {}
         }
       }
     }
@@ -5675,15 +5672,15 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "CodeKatas/1.0.0": {
+    "ConsoleArgsParser/1.0.0": {
       "type": "project",
-      "path": "../CodeKatas/CodeKatas.csproj",
-      "msbuildProject": "../CodeKatas/CodeKatas.csproj"
+      "path": "../CodeKatas/ConsoleArgsParser.csproj",
+      "msbuildProject": "../CodeKatas/ConsoleArgsParser.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "CodeKatas >= 1.0.0",
+      "ConsoleArgsParser >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "NUnit >= 3.12.0",
@@ -5697,17 +5694,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/NTest/NTest.csproj",
-      "projectName": "NTest",
-      "projectPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/NTest/NTest.csproj",
+      "projectUniqueName": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/NTest/ParserTests.csproj",
+      "projectName": "ParserTests",
+      "projectPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/NTest/ParserTests.csproj",
       "packagesPath": "/Users/Evalir/.nuget/packages/",
-      "outputPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/NTest/obj/",
+      "outputPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/NTest/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Evalir/.nuget/NuGet/NuGet.Config"
+        "/Users/Evalir/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -5718,8 +5715,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/CodeKatas.csproj": {
-              "projectPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/CodeKatas.csproj"
+            "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/ConsoleArgsParser.csproj": {
+              "projectPath": "/Users/Evalir/Dev/Courses/tendencias/lab/CAP/ConsoleArgsParser/CodeKatas/ConsoleArgsParser.csproj"
             }
           }
         }
@@ -5735,20 +5732,21 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[16.1.1, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.1.0, )",
-            "autoReferenced": true
+            "version": "16.1.1"
           },
           "NUnit": {
             "target": "Package",
-            "version": "[3.12.0, )"
+            "version": "3.12.0"
           },
           "NUnit3TestAdapter": {
             "target": "Package",
-            "version": "[3.13.0, )"
+            "version": "3.13.0"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.1.0",
+            "autoReferenced": true
           }
         },
         "imports": [
