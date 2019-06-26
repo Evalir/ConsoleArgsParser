@@ -23,7 +23,7 @@ unit_test_job:
     - 'cd ConsoleArgsParser'  
     - 'dotnet test'
 
-deploy_nuget_job:
+deploy_job:
   stage: deploy
   only:
     - tags
