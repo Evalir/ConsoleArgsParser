@@ -1,0 +1,36 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  except:
+    - tags
+  script:
+    - 'echo building...'
+    - 'cd ConsoleArgsParser' 
+    - 'dotnet build' 
+  artifacts:
+    expire_in: 1 week # save gitlab server space, we copy the files we need to deploy folder later on
+    paths:
+      - 'bin/' 
+
+unit_test_job:
+  stage: test
+  except:
+    - tags
+  script:
+    - 'echo testing...'
+    - 'cd ConsoleArgsParser'  
+    - 'dotnet test'
+
+deploy_nuget_job:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - 'echo deploy nuget package...' 
+    - 'cd ConsoleArgsParser/CodeKatas' 
+    - 'dotnet build /p:PackageVersion=%CI_COMMIT_TAG%'
+    - 'dotnet nuget push ./bin/Debug/CodeKatas.%CI_COMMIT_TAG%.nupkg'
