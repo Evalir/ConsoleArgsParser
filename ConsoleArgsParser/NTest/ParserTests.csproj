@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeKatas\CodeKatas.csproj" />
+    <ProjectReference Include="..\CodeKatas\ConsoleArgsParser.csproj" />
   </ItemGroup>
 
 </Project>
