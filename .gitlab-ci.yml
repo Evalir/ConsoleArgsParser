@@ -10,8 +10,6 @@ build_job:
     - 'echo building...'
     - 'cd ConsoleArgsParser' 
     - 'dotnet build' 
-  only:
-    master
 
 unit_test_job:
   stage: test
