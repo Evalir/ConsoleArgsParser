@@ -8,7 +8,8 @@ build_job:
     - tags
   script:
     - 'echo building...'
-    - 'cd ConsoleArgsParser' 
+    - 'cd ConsoleArgsParser'
+    - 'dotnet restore' 
     - 'dotnet build' 
 
 unit_test_job:
