@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/dotnet/core/sdk:2.1.0
+image: microsoft/dotnet:2.1-sdk-alpine
 stages:
   - build
   - test
