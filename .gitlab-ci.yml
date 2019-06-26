@@ -10,8 +10,9 @@ build_job:
   script:
     - 'echo building...'
     - 'cd ConsoleArgsParser'
+    - 'dotnet clean'
     - 'dotnet restore' 
-    - 'dotnet build' 
+    - 'dotnet build -c release' 
 
 unit_test_job:
   stage: test
