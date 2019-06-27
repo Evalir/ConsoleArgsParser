@@ -47,51 +47,7 @@ namespace CodeKatas
             if (args != null || args.Length == 0)
             {
                 chain = args.Split(" ");
-                int cant = chain.Length;
-                //if()
-                for (int i = 0; i < cant; i++)
-                {
-                    if (schems.ContainsKey(chain[i]))
-                    {
-                        bool bollean = false;
-                        if ((schems[chain[i]] == "false" || schems[chain[i]] == "true"))
-                            bollean = true;
-                        if (!bollean)
-                        {
-                            if (i == cant - 1)
-                                throw new InvalidArgException();
-                            if (i != cant - 1 && chain[i + 1][0] == '-')
-                                throw new InvalidArgException();
-
-                        }
-
-                        if ((chain[i].Length == 2 && chain[i][0] == '-') || (chain[i].Length == 3 && chain[i].Contains("--"))) { }
-            
-                        else
-                        {
-                            throw new InvalidArgException();
-                        }/*
-                        if ((schems[chain[i]]=="false" || schems[chain[i]] == "true"))
-                        {   //if(chain[i + 1][0] == '-')
-                                throw new InvalidArgException();
-                        }*/
-
-                        //dict.Remove(chain[i]);
-                        if (schems[chain[i]] == "false")
-                            dict.Add(chain[i], "true");
-                        else
-                        {
-                            string value = chain[i + 1].ToString();
-                            dict.Add(chain[i], value);
-                            i++;
-                        }
-
-                    }
-                    else
-                    {
-                        throw new InvalidArgException();
-                    }
-                }
+                dict = GeneralSParse(chain);
             }
             return dict;
         }
@@ -146,7 +102,8 @@ namespace CodeKatas
             }
            return dict;
         }
-
+        
+        /*
         public Dictionary<string, bool> BoolArgs(string[] scheme, string args)
         {
             var dict = new Dictionary<string, bool>();
@@ -184,6 +141,6 @@ namespace CodeKatas
                 }
             }
             return dict;
-        }
+        }*/
     }
 }

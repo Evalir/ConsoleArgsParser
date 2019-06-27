@@ -6,6 +6,7 @@ using System.Collections.Generic;
 namespace NTest
 {
     //Group Only Bools
+    /*
     [TestFixture]
     class BoolsTest
     {
@@ -125,6 +126,7 @@ namespace NTest
             Assert.Throws<InvalidArgException>(() => control.BoolArgs(scheme, arg));
         }
     }
+    */
     [TestFixture]
     class GeneralTests{
         [Test]
