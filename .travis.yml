@@ -3,7 +3,9 @@ solution: ./ConsoleArgsParser/CodeKatas.sln
 dotnet: 2.1
 install:
   - dotnet restore ./ConsoleArgsParser/CodeKatas.sln
-  - dotnet install NUnit.Console -Version 3.12.0 -OutputDirectory testrunner
 script:
-  - msbuild /p:Configuration=Release ./ConsoleArgsParser/CodeKatas.sln
-  - mono test ./ConsoleArgsParser/NTest/bin/Debug/netcoreapp2.1/NTest.dll
+  - 'cd ConsoleArgsParser'
+  - 'echo Building...'
+  - 'dotnet msbuild -p:Configuration=Release'
+  - 'echo Testing...'
+  - 'dotnet test'

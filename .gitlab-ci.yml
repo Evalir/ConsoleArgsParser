@@ -1,0 +1,35 @@
+image: microsoft/dotnet:2.1-sdk-alpine
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  except:
+    - tags
+  script:
+    - 'echo building...'
+    - 'cd ConsoleArgsParser'
+    - 'dotnet clean'
+    - 'dotnet restore' 
+    - 'dotnet build -c release' 
+
+unit_test_job:
+  stage: test
+  except:
+    - tags
+  script:
+    - 'echo testing...'
+    - 'cd ConsoleArgsParser'  
+    - 'dotnet test'
+
+deploy_job:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - 'echo deploy nuget package...' 
+    - 'cd ConsoleArgsParser/CodeKatas' 
+    - 'dotnet pack -p:PackageVersion=${CI_COMMIT_TAG}'
+    - 'dotnet nuget push ${CI_PROJECT_DIR}/ConsoleArgsParser/CodeKatas/bin/Debug/ConsoleArgsParser.${CI_COMMIT_TAG}.nupkg -k ${API_KEY} -s ${API_SOURCE}'
