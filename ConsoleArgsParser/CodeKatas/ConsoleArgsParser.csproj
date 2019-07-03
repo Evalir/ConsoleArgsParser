@@ -3,6 +3,22 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Version>1.0.5</Version>
+    <Description>A parser that receives flags as arguments that must be in the form of letters  preceded by a minus sign where each flag has a zero or one value associated to it and the values to parse depending of the flags.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Authors>INS368L-01</Authors>
+    <Company>INTEC.inc</Company>
+    <RepositoryUrl>https://github.com/Evalir/ConsoleArgsParser</RepositoryUrl>
+    <PackageIconUrl>https://miro.medium.com/max/875/1*CoMrLolIVYZZdpsjwGju8Q.jpeg</PackageIconUrl>
+    <RepositoryType></RepositoryType>
+    <PackageTags />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
