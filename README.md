@@ -1,6 +1,6 @@
 # ConsoleArgsParser
 ## CodeKatas
-Development tendency of apps course group project - CodeKatas, a library that helps you parse boolean flags from command line.
+Tendencies for Apps Development course group project - CodeKatas, a library that helps you parse boolean flags from command line.
 
 ## Getting Started
 
@@ -60,6 +60,10 @@ Use the namespace ArgsConsole
 
 **Combined Format:**
 ![](Images/Combined%20Format.jpeg)
+
+**Using an existing Interger Dictionary:**
+![](Images/IntDictionary.PNG)
+
 
 ## Running the tests
 
