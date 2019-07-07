@@ -49,7 +49,7 @@ NetCore extension installed
 ## Implemantation examples
 **Using:**
 
-Use the namespace ArgsConsole
+Use the namespace ArgsConsole:\
 ![](Images/Using.PNG)
 
 **Long Format:**
@@ -71,13 +71,6 @@ NUnit
 NUnit 3 Test Adapter (Required for running unit tests in .NetCore)
 Microsoft.NET.Test.sdk (Development tools for running unit tests in .NetCore)
 
-### Break down into end to end tests
-
-No tests ready yet 
-
-### And coding style tests
-
-No explanation avaliable 
 
 ## Built With
 
