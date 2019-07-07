@@ -48,7 +48,8 @@ NetCore extension installed
 
 ## Implemantation examples
 **Using:
-![](Images/Using.jpeg)
+Use the namespace ArgsConsole
+![](Images/Using.png)
 
 **Long Format:
 ![](Images/Long%20Format.jpeg)
