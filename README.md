@@ -51,13 +51,13 @@ NetCore extension installed
 Use the namespace ArgsConsole
 ![](Images/Using.PNG)
 
-**Long Format:
+**Long Format:**
 ![](Images/Long%20Format.jpeg)
 
-**Short Format:
+**Short Format:**
 ![](Images/Short%20Format.jpeg)
 
-**Combined Format:
+**Combined Format:**
 ![](Images/Combined%20Format.jpeg)
 
 ## Running the tests
