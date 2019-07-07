@@ -1,6 +1,6 @@
 # ConsoleArgsParser
 ## CodeKatas
-Development tendency of apps course group project - CodeKatas, a library that helps you parse boolean flags from command line.
+Tendencies for Apps Development course group project - CodeKatas, a library that helps you parse boolean flags from command line.
 
 ## Getting Started
 
@@ -16,13 +16,53 @@ NetCore extension installed
 
 ### Installing
 
-Get Visual Studio IDE at https://visualstudio.microsoft.com/downloads/
+(If retrieving package from nuget.org in Nuget Package Manager)
+  1.Create/open a .NET Core project
 
-Start installer and leave everything as default (It will automatically install all the requierements)
+  2.Open Nuget Package Manager for the solution
 
-Clone this project on your local machine
+  3.Select 'nuget.org' as origin
 
-Start coding!!!!!!
+  4.Search for 'ConsoleArgsParser'
+
+  5.Install the newest version on to the solution.
+
+(If manually downloading the nuget and then installing in Visual Studio 2017+)
+  1.Create/open a .NET Core project
+
+  2.Open Nuget Package Manager for the solution
+
+  3.Open the setting for the nugets origin.
+
+  4.Add a new origin
+
+  5.Name the new origin
+
+  6.Select the path for the origin (the path of the nuget package)
+
+  7.Click 'OK'
+
+  8.Select the new origin and look up for 'ConsoleArgsParser'
+
+  9.Install the nuget into the solution
+
+## Implemantation examples
+**Using:**
+
+Use the namespace ArgsConsole:\
+![](Images/Using.PNG)
+
+**Long Format:**
+![](Images/Long%20Format.jpeg)
+
+**Short Format:**
+![](Images/Short%20Format.jpeg)
+
+**Combined Format:**
+![](Images/Combined%20Format.jpeg)
+
+**Using an existing Interger Dictionary:**\
+![](Images/IntDictionary.PNG)
 
 
 ## Running the tests
@@ -31,13 +71,6 @@ NUnit
 NUnit 3 Test Adapter (Required for running unit tests in .NetCore)
 Microsoft.NET.Test.sdk (Development tools for running unit tests in .NetCore)
 
-### Break down into end to end tests
-
-No tests ready yet 
-
-### And coding style tests
-
-No explanation avaliable 
 
 ## Built With
 
