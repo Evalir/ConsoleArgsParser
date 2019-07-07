@@ -17,37 +17,48 @@ NetCore extension installed
 ### Installing
 
 (If retrieving package from nuget.org in Nuget Package Manager)
-1.Create/open a .NET Core project
+  1.Create/open a .NET Core project
 
-2.Open Nuget Package Manager for the solution
+  2.Open Nuget Package Manager for the solution
 
-3.Select 'nuget.org' as origin
+  3.Select 'nuget.org' as origin
 
-4.Search for 'ConsoleArgsParser'
+  4.Search for 'ConsoleArgsParser'
 
-5.Install the newest version on to the solution.
+  5.Install the newest version on to the solution.
 
 (If manually downloading the nuget and then installing in Visual Studio 2017+)
-1.Create/open a .NET Core project
+  1.Create/open a .NET Core project
 
-2.Open Nuget Package Manager for the solution
+  2.Open Nuget Package Manager for the solution
 
-3.Open the setting for the nugets origin.
+  3.Open the setting for the nugets origin.
 
-4.Add a new origin
+  4.Add a new origin
 
-5.Name the new origin
+  5.Name the new origin
 
-6.Select the path for the origin (the path of the nuget package)
+  6.Select the path for the origin (the path of the nuget package)
 
-7.Click 'OK'
+  7.Click 'OK'
 
-8.Select the new origin and look up for 'ConsoleArgsParser'
+  8.Select the new origin and look up for 'ConsoleArgsParser'
 
-9.Install the nuget into the solution
+  9.Install the nuget into the solution
 
 ## Implemantation examples
+**Using:
+![](Images/Using.jpeg)
+
+**Long Format:
 ![](Images/Long%20Format.jpeg)
+
+**Short Format:
+![](Images/Short%20Format.jpeg)
+
+**Combined Format:
+![](Images/Combined%20Format.jpeg)
+
 ## Running the tests
 
 NUnit 
