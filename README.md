@@ -61,7 +61,7 @@ Use the namespace ArgsConsole
 **Combined Format:**
 ![](Images/Combined%20Format.jpeg)
 
-**Using an existing Interger Dictionary:**
+**Using an existing Interger Dictionary:**\
 ![](Images/IntDictionary.PNG)
 
 
