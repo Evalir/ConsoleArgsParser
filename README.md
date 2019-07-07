@@ -47,9 +47,9 @@ NetCore extension installed
   9.Install the nuget into the solution
 
 ## Implemantation examples
-**Using:
+**Using:**
 Use the namespace ArgsConsole
-![](Images/Using.png)
+![](Images/Using.PNG)
 
 **Long Format:
 ![](Images/Long%20Format.jpeg)
