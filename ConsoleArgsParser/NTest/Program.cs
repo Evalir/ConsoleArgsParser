@@ -1,4 +1,4 @@
-﻿using CodeKatas;
+﻿using ArgsConsole;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -126,7 +126,8 @@ namespace NTest
         }
     }
     [TestFixture]
-    class GeneralTests{
+    class GeneralTests
+    {
         [Test]
         public void boolScheme()
         {
@@ -156,7 +157,7 @@ namespace NTest
             scheme.Add("-e", new int());
             var control = new ArgsClass();
             control.AddScheme<int>(scheme);
-            
+
             var scheme2 = new Dictionary<string, bool>();
             scheme2.Add("-b", new bool());
             control.AddScheme<bool>(scheme2);
@@ -220,6 +221,23 @@ namespace NTest
             control.AddScheme<bool>(new Dictionary<string, bool>() { { "-b", new bool() } });
             string Arg = "-e 8080 -b -d";
             Assert.Throws<InvalidArgException>(() => control.GeneralSParse(Arg));
+        }
+
+        [Test]
+        public void Validate_Array_of_arguments()
+        {
+            var control = new ArgsClass();
+            control.AddScheme<int>(new Dictionary<string, int>() { { "-A", new int() }, { "-D", new int() } }); // Scheme int
+            control.AddScheme<bool>(new Dictionary<string, bool>() { { "--T", new bool() } }); // Scheme Bool
+            control.AddScheme<double>(new Dictionary<string, double>() { { "-C", new double() } }); // Scheme Double
+            string[] Arg = { "-A", "8080", "--T", "-D", "0500", "-C", "90.55" };
+            var Expected = new Dictionary<string, string>();
+            Expected.Add("-A", "8080");
+            Expected.Add("-D", "0500");
+            Expected.Add("--T", "true");
+            Expected.Add("-C", "90.55");
+
+            Assert.AreEqual(Expected, control.GeneralSParse(Arg));
         }
     }
 }

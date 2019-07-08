@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CodeKatas
+namespace ArgsConsole
 {
     class Program
     {
