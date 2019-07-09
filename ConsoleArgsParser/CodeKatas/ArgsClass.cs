@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ArgsConsole
 {
@@ -111,17 +110,9 @@ namespace ArgsConsole
                         }
 
                         if ((chain[i].Length == 2 && chain[i][0] == '-') || (chain[i].Length == 3 && chain[i].Contains("--"))) { }
-
                         else
-                        {
                             throw new InvalidArgException();
-                        }/*
-                        if ((schems[chain[i]]=="false" || schems[chain[i]] == "true"))
-                        {   //if(chain[i + 1][0] == '-')
-                                throw new InvalidArgException();
-                        }*/
 
-                        //dict.Remove(chain[i]);
                         if (schems[chain[i]] == "false")
                             dict.Add(chain[i], "true");
                         else
@@ -133,9 +124,7 @@ namespace ArgsConsole
 
                     }
                     else
-                    {
                         throw new InvalidArgException();
-                    }
                 }
             }
             return dict;
@@ -160,6 +149,7 @@ namespace ArgsConsole
             var dict = new Dictionary<string, string>();
             if (args != null || args.Length == 0)
             {
+                chain = args;
                 int cant = chain.Length;
                 for (int i = 0; i < cant; i++)
                 {
@@ -177,11 +167,7 @@ namespace ArgsConsole
                         }
                         if ((chain[i].Length != 2 && chain[i][0] != '-') || (chain[i].Length != 3 && chain[i].Contains("--")))
                             throw new InvalidArgException();
-                        /*
-                    if ((schems[chain[i]]=="false" || schems[chain[i]] == "true"))
-                    {   //if(chain[i + 1][0] == '-')
-                            throw new InvalidArgException();
-                    }*/
+
                         dict.Remove(chain[i]);
                         if (schems[chain[i]] == "false")
                             dict.Add(chain[i], "true");
@@ -229,9 +215,7 @@ namespace ArgsConsole
                 if (command.Length != 2 || command[0] != '-')
                     throw new InvalidSchemeException();
                 else
-                {
                     dict.Add(command, false);
-                }
             }
             if (args != null)
             {
@@ -247,10 +231,7 @@ namespace ArgsConsole
                         dict.Add(item, true);
                     }
                     else
-                    {
                         throw new InvalidArgException();
-                    }
-
                 }
             }
             return dict;
